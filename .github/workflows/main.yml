@@ -33,7 +33,7 @@ jobs:
             -Djacoco.skip=true
 
   forbiddenApis-gha:
-    name: forbiddenApis
+    name: forbiddenApis on GHA
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -51,7 +51,7 @@ jobs:
           mvn compile forbiddenapis:check
 
   checkstyle-gha:
-    name: checkstyle
+    name: checkstyle on GHA
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -67,7 +67,7 @@ jobs:
         run: mvn compile checkstyle:checkstyle
 
   test-depot:
-    name: Test CrateDB SQL on GHA
+    name: Test CrateDB SQL on Depot
     runs-on: depot-ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -95,7 +95,7 @@ jobs:
             -Djacoco.skip=true
 
   forbiddenApis-depot:
-    name: forbiddenApis
+    name: forbiddenApis on Depot
     runs-on: depot-ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -113,7 +113,7 @@ jobs:
           mvn compile forbiddenapis:check
 
   checkstyle-depot:
-    name: checkstyle
+    name: checkstyle on Depot
     runs-on: depot-ubuntu-latest
     steps:
       - uses: actions/checkout@v4
