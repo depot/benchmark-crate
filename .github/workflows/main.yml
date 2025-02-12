@@ -85,6 +85,7 @@ jobs:
         env:
           CRATE_TESTS_SQL_REQUEST_TIMEOUT: "20"
         run: |
+          rm -rf plugins/es-repository-s3/src/test/
           mvn test \
             -Dtests.crate.run-windows-incompatible=true \
             -DforkCount=2 \
